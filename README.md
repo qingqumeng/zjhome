@@ -1,9 +1,9 @@
 # zjhome
 
-> zjhome web
-
+> zjhome web 
+插件:iview  stylus 
 ## Build Setup
-
+>首页  生活  动态  我
 ``` bash
 # install dependencies
 npm install
