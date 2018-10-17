@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
 import Router from 'vue-router'
-import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
+import Community from '@/pages/Community'
+import News from '@/pages/News'
+import My from '@/pages/My'
+
 
 Vue.use(Router)
 
@@ -14,24 +17,24 @@ export default new Router({
       component: Home
     },
     {
-      path: '/',
-      name: 'Footer',
-      component: Footer
+      path: '/Community',
+      name: 'Community',
+      component: Community
     },
     {
-      path: '/',
-      name: 'Footer',
-      component: Footer
+      path: '/News',
+      name: 'News',
+      component: News
     },
     {
-      path: '/',
-      name: 'Footer',
-      component: Footer
+      path: '/My',
+      name: 'My',
+      component: My
     },
     {
-      path: '/home',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/Home',
+      name: 'Home',
+      component: Home
     }
   ]
 })

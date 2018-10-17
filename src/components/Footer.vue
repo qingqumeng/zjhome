@@ -1,38 +1,35 @@
 <template>
   <div id="bottom">
-
     <ul class="bottom-ul">
-      <router-link to="/" tag="li">
+      <router-link to="/Home" tag="li">
         <div>
-          <Icon type="ios-home-outline" size="24" />        
-          <Icon type="ios-home" />        
+          <Icon type="ios-home-outline" v-if="active==='Home'"  @click="show" />        
+          <Icon type="ios-home" v-else @click="show"/>        
         </div>
           <span>首页</span>
       </router-link>
-      <router-link to="/" tag="li">
+      <router-link to="/Community" tag="li" >
         <div>
-          <Icon type="ios-keypad-outline" />
-          <Icon type="ios-keypad" />
-                
+          <Icon type="ios-keypad-outline" v-if="active==='Community'" />
+          <Icon type="ios-keypad" v-else/>                
         </div>
           <span>社区</span>
       </router-link>
-      <router-link to="/" tag="li">
+      <router-link to="/News" tag="li">
         <div>
-          <Icon type="ios-pin-outline" />        
-          <Icon type="ios-pin" />        
+          <Icon type="ios-pin-outline" v-if="active==='News'"/>        
+          <Icon type="ios-pin" v-else/>        
         </div>
           <span>动态</span>
       </router-link>
-      <router-link to="/" tag="li">
+      <router-link to="/My" tag="li">
         <div>
-          <Icon type="ios-contact-outline" /> 
-          <Icon type="ios-contact" /> 
+          <Icon type="ios-contact-outline" v-if="active==='My'"/> 
+          <Icon type="ios-contact" v-else/> 
         </div>
           <span>我的</span>
       </router-link>
     </ul>
-
   </div>
 </template>
 
@@ -41,9 +38,19 @@ export default {
   name: 'Footer',
   data () {
     return {
-      msg: 'Welcome to zjhome'
+      active:'My',
     }
-  }
+  },
+  created(){   
+    console.log(this.active)
+  },
+  mounted(){  
+    this.active=this.$route.name
+    console.log('mount'+this.active)
+  },
+  methods:{
+   show:()=>console.log('||'+this.active)  
+}
 }
 </script>
 
@@ -53,11 +60,12 @@ export default {
   width 100%
   position fixed
   bottom 0
+  background-color #f3f3f3
   .bottom-ul
     display:flex
     justify-content center
     align-items center 
-    height 2rem
+    height 1.6rem
     li
       width 25%
       display flex
@@ -66,10 +74,10 @@ export default {
       text-align center
       span 
         font-size .3rem
-      .i-icon 
-        font-size 0.3rem
+      i 
+        font-size .5rem
 
-    .router-link:hover
+    .router-link:hover,.router-link-active
       color:#25b5fe
 </style>
 
