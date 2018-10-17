@@ -3,7 +3,8 @@
 > zjhome web 
 插件:iview  stylus 
 ## Build Setup
->首页  生活  动态  我
+>首页  社区  动态  我的
+社区:>新闻公告  求职招聘  出租寻租 八卦爆料 跳蚤市场   其他
 ``` bash
 # install dependencies
 npm install
