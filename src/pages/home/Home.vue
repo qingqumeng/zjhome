@@ -1,19 +1,24 @@
 <template>
   <div class="Home">
-    <div class="HomeHeader">之江家园</div>
+    <div class="HomeHeader">之江家园</div> 
+      <!-- <Affix>
+        <span class="affix">之江家园</span>
+    </Affix> -->
     <home-swipe></home-swipe>
-    <h1>{{ msg }}</h1>   
+    <home-hot></home-hot>
+    {{ msg }}
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HomeSwipe from './component/HomeSwipe'
 import Footer from '../../components/Footer'
+import HomeSwipe from './component/HomeSwipe'
+import HomeHot from './component/HomeHot'
 
 export default {
   name: 'Home',
-  components:{HomeSwipe,Footer},
+  components:{HomeSwipe,Footer,HomeHot},
   data () {
     return {
       msg: 'Home'
@@ -27,7 +32,7 @@ export default {
 .Home
   .HomeHeader  
     position fixed
-    tap 0
+    top 0
     width 100%
     height 1.3rem
     line-height 1.3rem
@@ -35,4 +40,6 @@ export default {
     font-size 0.35rem
     color #f00
     z-index 1
+  .divider  
+    border-border-bottom  0.1rem solid #000
 </style>

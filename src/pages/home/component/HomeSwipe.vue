@@ -35,8 +35,8 @@ export default {
 <style lang="stylus" scoped>
 .wrapper
     background-color #f25d1f
-    height 5.5rem
-    margin-top 1px    
+    height 5rem
+    margin-top 1.3rem   
     .ivu-carousel
         height 100%
         overflow hidden
