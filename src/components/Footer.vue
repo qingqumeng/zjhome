@@ -3,8 +3,8 @@
     <ul class="bottom-ul">
       <router-link to="/Home" tag="li">
         <div>
-          <Icon type="ios-home-outline" v-if="active==='Home'"  @click="show" />        
-          <Icon type="ios-home" v-else @click="show"/>        
+          <Icon type="ios-home-outline" v-if="active==='Home'"  />        
+          <Icon type="ios-home" v-else/>        
         </div>
           <span>首页</span>
       </router-link>
@@ -38,15 +38,12 @@ export default {
   name: 'Footer',
   data () {
     return {
-      active:'My',
+      active:'Home'
     }
   },
-  created(){   
-    console.log(this.active)
-  },
   mounted(){  
-    this.active=this.$route.name
-    console.log('mount'+this.active)
+    // this.active=this.$route.name
+    // console.log('mount'+this.active)
   },
   methods:{
    show:()=>console.log('||'+this.active)  
@@ -60,7 +57,7 @@ export default {
   width 100%
   position fixed
   bottom 0
-  background-color #f3f3f3
+  background-color #f3f3f3 
   .bottom-ul
     display:flex
     justify-content center
@@ -73,10 +70,9 @@ export default {
       justify-content center
       text-align center
       span 
-        font-size .3rem
-      i 
-        font-size .5rem
-
+        font-size .3rem;
+      i
+        font-size :0.5rem      
     .router-link:hover,.router-link-active
       color:#25b5fe
 </style>

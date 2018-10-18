@@ -1,18 +1,19 @@
 <template>
   <div >
-    <h1>{{ msg }}</h1>   
+    <h1>{{ msg }}</h1>
+    <Footer></Footer>   
   </div>
 </template>
 
 <script>
-// import Footer from '@/components/Footer'
+import Footer from '../../components/Footer'
 
 export default {
   name: 'Index',
-  // components:{Footer},
+  components:{Footer},
   data () {
     return {
-      msg: 'Home'
+      msg: 'community'
     }
   }
 }

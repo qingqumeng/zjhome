@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
-import Community from '@/pages/Community'
-import News from '@/pages/News'
-import My from '@/pages/My'
+import Home from '@/pages/home/Home'
+import Community from '@/pages/community/Community'
+import News from '@/pages/news/News'
+import My from '@/pages/my/My'
 
 
 Vue.use(Router)
@@ -13,6 +13,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/Home',
       name: 'Home',
       component: Home
     },
@@ -30,11 +35,6 @@ export default new Router({
       path: '/My',
       name: 'My',
       component: My
-    },
-    {
-      path: '/Home',
-      name: 'Home',
-      component: Home
     }
   ]
 })
