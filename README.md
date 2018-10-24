@@ -5,6 +5,7 @@
 ## Build Setup
 >首页  社区  动态  我的
 社区:>新闻公告  求职招聘  出租寻租 八卦爆料 跳蚤市场   其他
+list
 ``` bash
 # install dependencies
 npm install
